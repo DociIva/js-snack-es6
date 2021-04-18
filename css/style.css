@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+.header {
+   padding: 0 20px;
+   height: 60px;
+   display: flex;
+   align-items: center;
+   margin: 0 auto 30px;
+}
+.main {
+    padding: 0 20px;
+}
+.bici-main {
+    display: flex;
+    align-items: center;
+}
+.biciclette {
+    color: green;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.peso {
+    margin: 0 0 0 10px;
+}
