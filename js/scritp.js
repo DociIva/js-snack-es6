@@ -1,3 +1,101 @@
+//jsnack 3
+//Si scriva una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+//La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri
+//inseriti dall'utente (è possibile usare, ad esempio, for/foreach/filter
+
+// 1
+const nuovoArray = ['Paolo', 'Fabio', 'Lorenzo', 'Luca'];
+let min = parseInt(prompt('Inserisci un numero tra 0 e 5'));
+while(isNaN(min) || min < 0 || min > nuovoArray.length) {
+    min = parseInt(prompt('Inserisci un numero tra 0 e 5'));
+}
+let max = parseInt(prompt('Inserisci un numero tra 0 e 5'));
+while(isNaN(max) || max < min || max > nuovoArray.length) {
+    max = parseInt(prompt('Inserisci un numero tra 0 e 5'));
+}
+// let newArray = [];
+/*
+function filterArray(arr, min, max) {
+    for(var i = 0; i < ar.length; i++){
+        const tmp = arr[i];
+        if(min <= i && max >= i) {
+            newArray.push(tmp);
+        }
+    }
+}
+filterArray(nuovoArray, min, max);
+console.log(newArray);*/
+
+
+/*
+const newFilterArray = nuovoArray.filter((element, index) => {
+    return min <= index && max >= index;
+});
+console.log(newFilterArray);
+*/
+
+function filterArray(min, max) {
+    nuovoArray.forEach((element,index) =>{
+        if(min <= index && max >= index){
+            newArray.push(element);
+        }
+    })
+}
+filterArray(min,max);
+console.log(newArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// PRIMO FATTI MODO NUOVO
 //console.log('Ciao');
 // Snack 1
 //Creare un array di oggetti: 
@@ -66,6 +164,7 @@ document.getElementById('max-bici').innerHTML = `
 //Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 // 1                           arr fu. dichiarata Sempre prima
+/*
 const randomNumeber = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -122,7 +221,7 @@ const risultatoNuovo = aggSquadre.map((element) => {
     }
 })
 console.log('Nuovo risultato ', risultatoNuovo);
-
+*/
 
 
 /*
@@ -141,56 +240,7 @@ console.log('Nuovo risultato', nuovoArray);*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// PRIMI FATTI NORMALI
 //console.log('ciao');
 /**
  * // jsnack 1
