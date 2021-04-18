@@ -3,7 +3,7 @@
 //Creare un array di oggetti: 
 //Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. 
 //Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
-
+/*
 const bici1 = {
     nome : 'pippo',
     peso : 9,
@@ -56,9 +56,87 @@ document.getElementById('max-bici').innerHTML = `
         <label for="peso">Peso:</label>
         <strong>${biciclette[pesoMaxIn].peso}</strong>
     </div>
-  `
+` */
+
+// // Snack 2
+//Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+//Nome sarà l'unica proprietà da compilare, le altre saranno tutte settate a 0.
+//Generare numeri random al posto degli 0 nelle proprietà:
+//Punti fatti e falli subiti
+//Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+// 1                           arr fu. dichiarata Sempre prima
+const randomNumeber = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1 )) + min;
+};
+// inizio squadre
+
+const squadre = [
+    {
+        nome : 'PSG',
+        puntiFatti : 0,
+        falliSubiti : 0,
+    },
+    {
+        nome : 'Roma',
+        puntiFatti : 0,
+        falliSubiti : 0,
+
+    },
+    {
+        nome : 'Juve',
+        puntiFatti : 0,
+        falliSubiti : 0,
+
+    },
+    {
+        nome : 'Toro',
+        puntiFatti : 0,
+        falliSubiti : 0,
+
+    },
+];
+
+// clone di squadre
+let aggSquadre = [...squadre];
+
+console.log(squadre);
+// for 
+
+
+for(let i = 0; i < aggSquadre.length; i++) {
+    aggSquadre[i].puntiFatti = randomNumeber(0,100);
+    aggSquadre[i].falliSubiti = randomNumeber(0,100);
+   
+}
+console.log(aggSquadre);
+// nuovo array per il risultato
+let nuovoArray = [];
+
+const risultatoNuovo = aggSquadre.map((element) => {
+    return {
+        nome: element.nome,
+        falliSubiti: element.falliSubiti
+    }
+})
+console.log('Nuovo risultato ', risultatoNuovo);
+
+
+
+/*
+for(let i = 0; i < aggSquadre.length; i++) {
+   nuovoArray.push({
+        nome :aggSquadre[i].nome,
+        falliSubiti : aggSquadre[i].falliSubiti,
+   })    
+}
+console.log('Nuovo risultato', nuovoArray);*/
+
+
   
-  
+
 
 
 
