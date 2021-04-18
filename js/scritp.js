@@ -4,6 +4,7 @@
 //inseriti dall'utente (è possibile usare, ad esempio, for/foreach/filter
 
 // 1
+/*
 const nuovoArray = ['Paolo', 'Fabio', 'Lorenzo', 'Luca'];
 let min = parseInt(prompt('Inserisci un numero tra 0 e 5'));
 while(isNaN(min) || min < 0 || min > nuovoArray.length) {
@@ -12,7 +13,7 @@ while(isNaN(min) || min < 0 || min > nuovoArray.length) {
 let max = parseInt(prompt('Inserisci un numero tra 0 e 5'));
 while(isNaN(max) || max < min || max > nuovoArray.length) {
     max = parseInt(prompt('Inserisci un numero tra 0 e 5'));
-}
+} */
 // let newArray = [];
 /*
 function filterArray(arr, min, max) {
@@ -33,7 +34,7 @@ const newFilterArray = nuovoArray.filter((element, index) => {
 });
 console.log(newFilterArray);
 */
-
+/*
 function filterArray(min, max) {
     nuovoArray.forEach((element,index) =>{
         if(min <= index && max >= index){
@@ -43,13 +44,49 @@ function filterArray(min, max) {
 }
 filterArray(min,max);
 console.log(newArray);
+*/
 
 
+// 2
+const oggettiArray = [
+    {
+        nome: 'Lol',
+        tipo: 'maglietta',
+        colore: 'rosso',
+    },
+    {
+        nome: 'Jack',
+        tipo: 'felpa',
+        colore: 'verde',
+    },
+    {
+        nome: 'Jenny',
+        tipo: 'scarpe',
+        colore: 'nere',
+    },
+    {
+        nome: 'Niki',
+        tipo: 'giubotto',
+        colore: 'blu',
+    },
+];
 
 
+// aggiungere un altro campo con il map ritorn un array nuovo
+// lo richiamo con il nome dell array
+const nuovoArrayObj =  oggettiArray.map((element) =>{
+    // cosi prendi ciò che dentro già dentro l'elemento
+   const nuovoElemento = {
+       ...element,
+       costo: randomNumeber(0,10)
+    }
+    return nuovoElemento;
+});
 
-
-
+function randomNumeber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1 ) + min )
+}
+console.log(nuovoArrayObj);
 
 
 
